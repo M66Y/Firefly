@@ -89,5 +89,5 @@ src/
 │   ├── navBarConfig.ts      # 导航栏配置
 │   ├── pioConfig.ts         # 看板娘配置
 │   └── sidebarConfig.ts     # 侧边栏配置
-└── FooterConfig.html        # 页脚HTML内容
+└── config/FooterConfig.html # 页脚HTML内容
 ```
