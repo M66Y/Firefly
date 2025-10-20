@@ -17,7 +17,7 @@ draft: false
 
 **🖥️在线预览： [Firefly - Demo site](https://demo-firefly.netlify.app/)**
 
-**🏠我的博客： [https://www.cuteleaf.cn](https://www.cuteleaf.cn/)**
+**🏠我的博客： [https://blog.cuteleaf.cn](https://blog.cuteleaf.cn/)**
 
 **📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
 
