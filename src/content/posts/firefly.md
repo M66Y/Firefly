@@ -58,7 +58,7 @@ draft: false
 ## 🎛️ 高级配置模块
 
 - **特效系统**: 樱花特效、动画参数、循环控制
-- **统计系统**: Twikoo文章访问量统计、独立开关控制、多语言支持
+- **统计系统**: 文章访问量统计、独立开关控制
 - **开发工具**: 代码高亮、主题支持、插件支持
 - **许可证系统**: 许可证显示、链接配置、开关控制
 - **SEO优化**: OpenGraph、站点信息、关键词、语言设置
@@ -87,7 +87,7 @@ src/
 │   ├── index.ts              # 配置索引文件
 │   ├── siteConfig.ts         # 站点基础配置
 │   ├── profileConfig.ts      # 用户资料配置
-│   ├── commentConfig.ts      # 评论系统配置（Twikoo评论和访问量统计）
+│   ├── commentConfig.ts      # 评论系统配置
 │   ├── announcementConfig.ts # 公告配置
 │   ├── licenseConfig.ts      # 许可证配置
 │   ├── footerConfig.ts       # 页脚配置
