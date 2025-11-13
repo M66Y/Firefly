@@ -27,7 +27,7 @@ draft: false
 
 ::github{repo="saicaca/fuwari"}
 
-<img src="/assets/images/firefly.png" />
+![Firefly](./images/1.webp)
 
 
 ## 🚀 技术架构

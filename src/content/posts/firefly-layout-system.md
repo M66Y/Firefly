@@ -31,7 +31,7 @@ Firefly 提供了灵活的布局系统，允许您根据内容需求和个人喜
 
 #### 布局结构
 
-![左侧边栏布局](left.webp)
+![左侧边栏布局](./images/left.webp)
 
 <!-- 此处可以插入左侧边栏布局截图 -->
 
@@ -71,9 +71,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 
 #### 布局结构
 
-![右侧边栏布局](right.webp)
-
-<!-- 此处可以插入右侧边栏布局截图 -->
+![右侧边栏布局](./images/right.webp)
 
 #### 适用场景
 
@@ -112,9 +110,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 
 #### 布局结构
 
-![双侧边栏布局](both.webp)
-
-<!-- 此处可以插入双侧边栏布局截图 -->
+![双侧边栏布局](./images/both.webp)
 
 #### 适用场景
 
@@ -173,7 +169,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 
 #### 布局结构
 
-![列表模式布局](left.webp)
+![列表模式布局](./images/left.webp)
 
 #### 优点
 
@@ -215,7 +211,7 @@ export const siteConfig: SiteConfig = {
 
 #### 布局结构
 
-![网格模式布局](grid.webp)
+![网格模式布局](./images/grid.webp)
 
 #### 优点
 

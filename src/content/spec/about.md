@@ -23,9 +23,6 @@
 
 ::github{repo="saicaca/fuwari"}
 
-<img src="/assets/images/firefly.png" />
-
-
 
 ## 📫 联系方式
 
