@@ -412,9 +412,6 @@ export const siteConfig: SiteConfig = {
   <text x="590" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#1976d2">右侧边栏</text>
   <text x="590" y="110" text-anchor="middle" font-size="12" fill="#666">280px</text>
   
-  <!-- 成功标识 -->
-  <text x="680" y="105" font-size="16" fill="#2e7d32">✅ 布局合理</text>
-  
   <!-- 箭头指示 -->
   <path d="M 340 180 L 340 195" stroke="#4caf50" stroke-width="2" marker-end="url(#arrowgreen)"/>
   
