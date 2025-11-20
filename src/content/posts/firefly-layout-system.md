@@ -1,7 +1,7 @@
 ---
 title: Firefly 布局系统详解
 published: 1970-01-02
-description: 深入了解 Firefly 的布局系统，包括侧边栏布局（左侧/右侧/双侧）和文章列表布局（列表/网格），以及为什么双侧边栏与网格模式会冲突的技术原理。
+description: 深入了解 Firefly 的布局系统，包括侧边栏布局（左侧/双侧）和文章列表布局（列表/网格），以及为什么双侧边栏与网格模式会冲突的技术原理。
 image: api
 tags: [Firefly, 布局, 教程, 配置]
 category: 教程
@@ -18,7 +18,7 @@ Firefly 提供了灵活的布局系统，允许您根据内容需求和个人喜
 
 ## 一、侧边栏布局系统
 
-侧边栏是博客页面的重要组成部分，用于展示导航、分类、标签、统计信息等辅助内容。Firefly 支持三种侧边栏布局模式。
+侧边栏是博客页面的重要组成部分，用于展示导航、分类、标签、统计信息等辅助内容。Firefly 支持两种侧边栏布局模式。
 
 ### 1.1 左侧边栏模式 (position: "left")
 
@@ -49,56 +49,19 @@ Firefly 提供了灵活的布局系统，允许您根据内容需求和个人喜
 export const sidebarLayoutConfig: SidebarLayoutConfig = {
   enable: true,
   position: "left", // 左侧边栏
-  components: [
-    { type: "profile", sidebar: "left", order: 1 },
-    { type: "announcement", sidebar: "left", order: 2 },
-    { type: "categories", sidebar: "left", order: 3 },
-    { type: "tags", sidebar: "left", order: 5 },
+  leftComponents: [
+    { type: "profile", order: 1 },
+    { type: "announcement", order: 2 },
+    { type: "categories", order: 3 },
+    { type: "tags", order: 5 },
   ],
+  rightComponents: [], // 右侧组件为空
 };
 ```
 
 ---
 
-### 1.2 右侧边栏模式 (position: "right")
-
-#### 特点
-
-- 侧边栏固定在页面右侧
-- 主内容区域位于左侧
-- 更突出主内容区域
-- 适合内容驱动的博客
-
-#### 布局结构
-
-![右侧边栏布局](./images/right.webp)
-
-#### 适用场景
-
-- 现代简约风格
-- 强调内容的博客
-- 移动端优先的设计（主内容优先加载）
-- 辅助信息不需要过度突出的场景
-
-#### 配置示例
-
-```typescript
-// src/config/sidebarConfig.ts
-export const sidebarLayoutConfig: SidebarLayoutConfig = {
-  enable: true,
-  position: "right", // 右侧边栏
-  components: [
-    { type: "profile", sidebar: "right", order: 1 },
-    { type: "announcement", sidebar: "right", order: 2 },
-    { type: "categories", sidebar: "right", order: 3 },
-    { type: "tags", sidebar: "right", order: 5 },
-  ],
-};
-```
-
----
-
-### 1.3 双侧边栏模式 (position: "both")
+### 1.2 双侧边栏模式 (position: "both")
 
 #### 特点
 
@@ -134,16 +97,18 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 export const sidebarLayoutConfig: SidebarLayoutConfig = {
   enable: true,
   position: "both", // 双侧边栏
-  components: [
+  leftComponents: [
     // 左侧边栏组件
-    { type: "profile", sidebar: "left", order: 1 },
-    { type: "announcement", sidebar: "left", order: 2 },
-    { type: "categories", sidebar: "left", order: 3 },
-    { type: "tags", sidebar: "left", order: 5 },
-    
+    { type: "profile", order: 1 },
+    { type: "announcement", order: 2 },
+    { type: "categories", order: 3 },
+    { type: "tags", order: 5 },
+  ],
+  rightComponents: [
     // 右侧边栏组件
-    { type: "stats", sidebar: "right", order: 6 },
-    { type: "advertisement", sidebar: "right", order: 10 },
+    { type: "stats", order: 1 },
+    { type: "sidebarToc", order: 2, showOnPostPage: true },
+    { type: "advertisement", order: 10 },
   ],
 };
 ```
@@ -512,8 +477,6 @@ const showLayoutSwitch =
 |-----------|------------|--------|---------|
 | 左侧边栏   | 列表模式    | ⭐⭐⭐⭐⭐ | 传统博客风格，视觉效果好 |
 | 左侧边栏   | 网格模式    | ⭐⭐⭐⭐⭐ | 快速浏览，信息密集 |
-| 右侧边栏   | 列表模式    | ⭐⭐⭐⭐⭐ | 现代简约风格，突出内容 |
-| 右侧边栏   | 网格模式    | ⭐⭐⭐⭐⭐ | 内容为主，辅助次之 |
 | 双侧边栏   | 列表模式    | ⭐⭐⭐⭐  | 宽屏显示，信息丰富 |
 
 #### ❌ 不推荐/不支持组合
@@ -585,7 +548,7 @@ defaultMode: "list"
 #### 技术博客
 
 ```typescript
-// 方案1：单侧边栏 + 网格模式
+// 方案1：左侧边栏 + 网格模式
 position: "left"
 defaultMode: "grid"
 
@@ -599,12 +562,12 @@ defaultMode: "list"
 #### 个人日记
 
 ```typescript
-// 推荐：右侧边栏 + 列表模式
-position: "right"
+// 推荐：左侧边栏 + 列表模式
+position: "left"
 defaultMode: "list"
 ```
 
-**原因**：突出内容，弱化辅助信息，营造亲切感。
+**原因**：突出内容，营造亲切感。
 
 ---
 
