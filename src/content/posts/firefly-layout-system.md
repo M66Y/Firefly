@@ -132,7 +132,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 - 展示更多文章摘要
 - 适合深度阅读
 
-#### 布局结构
+#### 列表布局结构
 
 ![列表模式布局](./images/left.webp)
 
@@ -173,7 +173,7 @@ export const siteConfig: SiteConfig = {
 - 紧凑布局，信息密度高
 - 适合快速浏览
 
-#### 布局结构
+#### 网格布局结构
 
 ![网格模式布局](./images/grid.webp)
 
@@ -185,6 +185,15 @@ export const siteConfig: SiteConfig = {
 - ✅ 现代化的瀑布流风格
 - ✅ 适合文章数量多的博客
 - ✅ 视觉冲击力强，封面图吸引眼球
+
+#### 瀑布流布局结构
+Firefly 的网格模式内置了智能瀑布流布局支持，解决了网格布局中因图文混合文章导致的卡片高度不一致导致的空白问题。
+
+![瀑布流布局](./images/masonry.webp)
+
+- **智能排版**：采用 Z 字形分布（左右交替），严格保持文章的时间顺序。
+- **消除空白**：通过绝对定位精确计算每个卡片的位置，让卡片紧贴上一行的卡片，消除垂直方向的空白间隙。
+- **配置灵活**：您可以在 `siteConfig.ts` 中通过 `postListLayout.grid.masonry` 选项自由开启或关闭此功能。
 
 #### 限制
 
@@ -206,6 +215,9 @@ export const siteConfig: SiteConfig = {
   postListLayout: {
     defaultMode: "grid", // 网格模式
     allowSwitch: true,   // 允许用户切换
+    grid: {
+      masonry: true,     // 开启瀑布流布局
+    },
   },
 };
 ```
