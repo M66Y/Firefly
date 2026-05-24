@@ -77,6 +77,20 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				cover: "",
 				lrc: "",
 			},
+			{
+				name: "使一颗心免于哀伤",
+				artist: "知更鸟、HOYO-MiX、Chevy",
+				url: "/assets/music/知更鸟、HOYO-MiX、Chevy - 使一颗心免于哀伤.mp3",
+				cover: "",
+				lrc: "",
+			},
+			{
+				name: "七里香",
+				artist: "周杰伦",
+				url: "/assets/music/周杰伦 - 七里香.mp3",
+				cover: "",
+				lrc: "",
+			},
 		],
 	},
 };
