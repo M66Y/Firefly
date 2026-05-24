@@ -11,7 +11,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	showInNavbar: true,
 
 	// 使用方式："meting" 使用 Meting API，"local" 使用本地音乐列表
-	mode: "meting",
+	mode: "local",
 
 	// 默认音量 (0-1)
 	volume: 0.7,
@@ -28,7 +28,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		// 默认使用官方 API，也可以使用自定义 API
 		api: "https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r",
 		// 音乐平台：netease=网易云音乐, tencent=QQ音乐, kugou=酷狗音乐, xiami=虾米音乐, baidu=百度音乐
-		server: "kugou",
+		server: "netease",
 		// 类型：song=单曲, playlist=歌单, album=专辑, search=搜索, artist=艺术家
 		type: "playlist",
 		// 歌单/专辑/单曲 ID 或搜索关键词
@@ -50,10 +50,38 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
-				name: "使一颗心免于哀伤",
-				artist: "知更鸟 / HOYO-MiX / Chevy",
-				url: "/assets/music/使一颗心免于哀伤-哼唱.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
+				name: "光るなら (若能绽放光芒)",
+				artist: "Goose house",
+				url: "/assets/music/Goose house - 光るなら (若能绽放光芒).wav",
+				cover: "",
+				lrc: "",
+			},
+			{
+				name: "虹の彼方に (在彩虹的彼方)",
+				artist: "ReoNa",
+				url: "/assets/music/ReoNa - 虹の彼方に (在彩虹的彼方).wav",
+				cover: "",
+				lrc: "",
+			},
+			{
+				name: "恋人未满",
+				artist: "S.H.E",
+				url: "/assets/music/S.H.E - 恋人未满.wav",
+				cover: "",
+				lrc: "",
+			},
+			{
+				name: "昔涟",
+				artist: "张韶涵、HOYO-MiX",
+				url: "/assets/music/张韶涵、HOYO-MiX - 昔涟.wav",
+				cover: "",
+				lrc: "",
+			},
+			{
+				name: "Call of Silence",
+				artist: "澤野弘之",
+				url: "/assets/music/澤野弘之 - Call of Silence.wav",
+				cover: "",
 				lrc: "",
 			},
 		],
