@@ -91,13 +91,6 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				cover: "",
 				lrc: "",
 			},
-			{
-				name: "The Moment",
-				artist: "孙燕姿",
-				url: "/assets/music/孙燕姿 - The Moment.kgm.flac",
-				cover: "",
-				lrc: "",
-			},
 		],
 	},
 };
