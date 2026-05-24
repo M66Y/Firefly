@@ -37,3 +37,7 @@ Firefly-docs/
 cache/
 package/
 .obsidian/
+
+# 忽略大音频文件
+public/assets/music/*.wav
+public/assets/music/*.flac
