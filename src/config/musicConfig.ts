@@ -64,13 +64,6 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				lrc: "",
 			},
 			{
-				name: "恋人未满",
-				artist: "S.H.E",
-				url: "/assets/music/S.H.E - 恋人未满.mp3",
-				cover: "",
-				lrc: "",
-			},
-			{
 				name: "昔涟",
 				artist: "张韶涵、HOYO-MiX",
 				url: "/assets/music/张韶涵、HOYO-MiX - 昔涟.mp3",
@@ -81,13 +74,6 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				name: "Call of Silence",
 				artist: "澤野弘之",
 				url: "/assets/music/澤野弘之 - Call of Silence.mp3",
-				cover: "",
-				lrc: "",
-			},
-			{
-				name: "不遗憾",
-				artist: "李荣浩",
-				url: "/assets/music/李荣浩 - 不遗憾 [mqms2].flac",
 				cover: "",
 				lrc: "",
 			},
